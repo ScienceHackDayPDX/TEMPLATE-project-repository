@@ -9,7 +9,7 @@ Then write a README.md document that describes your project.
 
 Don't be shy about sharing your code! Open Source is all about colaboration. Nothing is perfect, and that's ok! [Done is better than perfect](https://twitter.com/lettershoppe/status/897213248260460544), so get it up on GitHub!
 
-Link out to a CONTRIBUTING.md guide that will show people how they can help. 
+Link out to a (CONTRIBUTING.md)[https://github.com/ScienceHackDayPDX/TEMPLATE-project-repository/blob/master/CONTRIBUTING.md] guide that will show people how they can help. 
 
 If your project is going to involve people, get everyone on the same page with a CODEofCONDUCT.md.
 
