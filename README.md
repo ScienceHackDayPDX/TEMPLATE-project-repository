@@ -1,7 +1,10 @@
 # TEMPLATE-project-repository
-1. Clone this repository to kickstart documenting your Science Hack Day PDX 2017 project
+1. Clone/Download or simply Fork this repository to kickstart documenting your Science Hack Day PDX 2017 project
+- Once you have made your copy or fork, copy the address. It should look like this: https://github.com/yourGitHubName/TEMPLATE-project-repository 
+- [Here](https://github.com/daniellecrobinson/TEMPLATE-project-repository) is my fork of the repo if you want to check that out, note in the top left it says "forked from" and then the original location. 
+- Once you have Forked it, you can edit the text in the files to add documentation about your project. But first...
 
-2. Create an Issue in the Science Hack Day repository, and fill out the template form to link us to your project. 
+2. We've all got issues...[Click here to create an Issue](https://github.com/ScienceHackDayPDX/Science-Hack-Day-PDX-2017/issues/new) in the [Science Hack Day](https://github.com/ScienceHackDayPDX/Science-Hack-Day-PDX-2017) repository, and fill out the form to link us to your project. 
 
 3. Write a README.md document that describes your project. 
 - What did you do?
