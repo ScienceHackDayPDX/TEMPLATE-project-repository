@@ -1,4 +1,7 @@
-Where is this project going? The ROADMAP.md is a place to lay out your vision for how the project is going to get to where it's going. 
-This project is meant to distill down climate 
+This project is meant to distill down climate data into an easy to understand visual (hardware driven) that is interactive to help users understand the impact of climate change. Using the least amount of code to output to hardware. 
 
-You might do this with a timeline, or a list of software or hardware milestones. A ROADMAP.md helps people who want to know more about your project to understand how you will get to your goal. 
+Use NASA climate models (data.gov) for interval 
+
+Steps: 
+  1. Collect climate data - focusing on CO2 & temperature 
+  2. Write code to 
