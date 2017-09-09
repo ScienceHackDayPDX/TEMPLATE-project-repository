@@ -4,6 +4,10 @@ Our slack channel https://pdxscience.slack.com/messages/C70J6UA75/
 
 Use NASA climate models (data.gov) for interval 
 
+Technologies used: 
+Arduino
+JavaScript 
+
 Steps: 
   1. Collect climate data - focusing on CO2 & temperature 
   2. Write code to communicate with led board 
