@@ -1,10 +1,8 @@
 #!/usr/bin/env python
 """
-duffel.py
+climate.py
 
-Flask app for routing to Rail outputs on various hosts. Currently supports only
-Amazon Cloud Drive. Requires https://github.com/yadayada/acd_cli is authorized
-and set up as owner of shared directory.
+Flask app for climate change art.
 """
 from flask import Flask, redirect, render_template, abort, request, Response
 from werkzeug import Headers
