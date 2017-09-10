@@ -1,10 +1,3 @@
-# TEMPLATE-project-repository
-1. Clone/Download or simply Fork this repository to kickstart documenting your Science Hack Day PDX 2017 project
-- Once you have made your copy or fork, copy the address. It should look like this: https://github.com/yourGitHubName/TEMPLATE-project-repository 
-- [Here](https://github.com/daniellecrobinson/TEMPLATE-project-repository) is my fork of the repo if you want to check that out, note in the top left it says "forked from" and then the original location. 
-- Once you have Forked it, you can edit the text in the files to add documentation about your project. But first...
-
-2. We've all got issues...[Click here to create an Issue](https://github.com/ScienceHackDayPDX/Science-Hack-Day-PDX-2017/issues/new) in the [Science Hack Day](https://github.com/ScienceHackDayPDX/Science-Hack-Day-PDX-2017) repository, and fill out the form to link us to your project. 
 
 3. Write a README.md document that describes your project. 
 - What did you do?
@@ -21,6 +14,41 @@
 
 7. Is this just the beginning for your project? Write a [ROADMAP.md](https://github.com/ScienceHackDayPDX/TEMPLATE-project-repository/blob/master/ROADMAP.md) to let contributors know where the project is going!
 
+# Requirements
+* Arduino uno
+* python 2.7
+* Use your package manager to `install pip`
+* On your command line run
+```  
+# for Mac: 
+$ brew install portaudio  
 
+# then: 
+$ sudo pip install flask requests serial pyaudio 
+```
 
+# Usage
+* Clone this repository
+* Connect your arduino
+* Discover your serial port name by:
+```
+# Before connecting Arduino:
+$ ls /dev/ >> ~/before.txt
+
+# After conencting Arduino:
+$ ls /dev/ >> ~/after.txt
+
+# Find the new device:
+$ diff ~/before.txt ~/after.txt
+
+# On Mac OS, the device will be something like /dev/tty.usbmodem14611.
+# On Linux, the device will be something like /dev/ttyACM0
+```
+* Update the `ser` variable on line 34 in `climate.py`
+* In your terminal:
+```
+$ cd climate
+$ python climate.py
+# some systems need to run: python2 climate.py
+```
 
