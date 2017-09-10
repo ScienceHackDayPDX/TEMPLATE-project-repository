@@ -1,4 +1,6 @@
 #include <Arduino.h>
+#include <Math.h>
+
 #define RED 0
 #define GREEN 1
 #define BLUE 2
@@ -11,7 +13,6 @@
 #define HEART_PIN 12 // PWM output
 
 //#define DEBUG // loop() execution time
-#define DEBUG2 //Timer2
 
 int adc_red   = 0;
 int adc_blue  = 0;
@@ -87,16 +88,20 @@ int adc_read(int color){
     case RED:
     ADMUX = B01100000; // AVcc, left adjust (high register only), ADC0.
     break;
+
     case GREEN:
     ADMUX = B01100001; // ADC1.
     break;
+    
     case BLUE:
     ADMUX = B01100010; // ADC2.
     break;
   }
   interrupts();
 
-  delay(1); // It doesn't switch inputs without this.
+  // It doesn't switch inputs without this. Mixing and matching Arduino code
+  // with AVR c++ leads to weird stuff.
+  delay(1); 
 
   return ADCH;
 }
