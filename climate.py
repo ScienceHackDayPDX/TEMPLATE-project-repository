@@ -19,9 +19,19 @@ import threading
 import wave, sys, pyaudio
 app = Flask(__name__)
 
-# Change depending on device; can be discovered by ls-ing
-# with and without device connected
-ser = serial.Serial('/dev/tty.usbmodem14611', 9600)
+# Change depending on device; discover serial port name by:
+# Before connecting Arduino:
+# `ls /dev/ >> ~/before.txt`
+#
+# After conencting Arduino:
+# `ls /dev/ >> ~/after.txt`
+#
+# Find the new device:
+# `diff ~/before.txt ~/after.txt`
+#
+# On Mac OS, the device will be something like /dev/tty.usbmodem14611.
+# On Linux, the device will be something like /dev/ttyACM0
+ser = serial.Serial('/dev/tty.usbmodem1411', 9600)
 
 class KnobThread(threading.Thread):
     """ Gets knob value on separate thread. """
@@ -29,7 +39,6 @@ class KnobThread(threading.Thread):
         super(KnobThread, self).__init__()
         self.val = 0
         self.daemon = True
-        ser = serial.Serial('/dev/tty.usbmodem14611', 9600)
     def run(self):
         while True:
             val = ser.readline()
@@ -225,7 +234,7 @@ def page_to_reload():
     return (
 """<!DOCTYPE html>
 <html>
-<head><meta http-equiv="refresh" content=".3">
+<head><meta http-equiv="refresh" content=".2">
 <style>
 h1 {{color:white; font-family: Arial; font-size: 9em}}
 </style>
